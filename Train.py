@@ -10,3 +10,5 @@ def Train(epochs):
         a1 = np.zeros(Param.nHide1)
 
         
+
+        
