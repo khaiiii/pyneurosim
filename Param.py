@@ -1,6 +1,19 @@
+#layer
+layer = [784, 256, 100, 10]
+laynum = 4
 nInput = 784
-nHide1 = 400
+nHide1 = 256
 nHide2 = 100
 nOutput = 10
 
-n = 1000
+
+#useHardware
+useHardwareInFF = True
+useHardwareInBP = True
+useHardwareInWU = True
+
+#numBit
+numBit = 1 # signal is 1 or 0
+
+#normal value
+readVoltage = 0.5

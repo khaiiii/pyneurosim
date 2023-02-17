@@ -1,16 +1,22 @@
 import tensorflow
 import math
 import numpy as np
+import Array
 
 def readMNISTdataset():
     mnist = tensorflow.keras.datasets.mnist
     (Input, Output), (testInput, testOutput) = mnist.load_data()
 
-    Input = np.around(Input/255.0)
-    testInput = np.around(testInput/255.0)
+
+    Input = Input/255.0
+    testInput = testInput/255.0
+
+    dInput = np.around(Input)
 
 
     Input = Input.reshape(60000, 28*28)
     testInput = testInput.reshape(10000, 28*28)
+    dInput = dInput.reshape(60000, 28*28)
 
-    
+    Array.Input.Input = Input
+    Array.Input.dInput = dInput
