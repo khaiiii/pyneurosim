@@ -13,7 +13,7 @@ useHardwareInBP = True
 useHardwareInWU = True
 
 #numBit
-numBit = 1 # signal is 1 or 0
+numBit = 8 # signal is 1 or 0
 
 #normal value
 readVoltage = 0.5
