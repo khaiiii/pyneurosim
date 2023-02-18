@@ -47,5 +47,5 @@ def Train(Input):
             
         
         # hardware BackPropagation
-        if(Param.useHardwareInBP):
+        #if(Param.useHardwareInBP):
             
