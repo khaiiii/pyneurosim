@@ -11,5 +11,3 @@ IO.readMNISTdataset()
 
 
 Train.Train(Array.Input.Input)
-
-#print(Array.Output.Output[1])

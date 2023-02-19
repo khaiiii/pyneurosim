@@ -21,22 +21,12 @@ class Array:
         current = self.voltage / (1 / self.conductance + totalwireResistance)
 
         return current
-
-class ArrayIH(Array):
-    #ArrayIH = np.random.rand(Param.nHide1, Param.nInput) #conductance
-    ArrayIH = np.full((Param.nHide1, Param.nInput), 3.0769e-9 + (3.8462e-8 - 3.0769e-9) * random.random())
-    arrayrowsize = Param.nInput 
     
-
-class ArrayHH(Array):
-    #ArrayHH = np.random.rand(Param.nHide2, Param.nHide1)
+    ArrayIH = np.full((Param.nHide1, Param.nInput), 3.0769e-9 + (3.8462e-8 - 3.0769e-9) * random.random())
     ArrayHH = np.full((Param.nHide2, Param.nHide1), 3.0769e-9 + (3.8462e-8 - 3.0769e-9) * random.random())
-    arrayrowsize = Param.nHide1
-
-class ArrayHO(Array):
-    #ArrayHO = np.random.rand(Param.nOutput, Param.nHide2)
     ArrayHO = np.full((Param.nOutput, Param.nHide2), 3.0769e-9 + (3.8462e-8 - 3.0769e-9) * random.random())
-    arrayrowsize = Param.nHide2
+
+    array = [ArrayIH, ArrayHO, ArrayHH]
 
 class Input:
     Input = np.zeros((60000, 28*28))
